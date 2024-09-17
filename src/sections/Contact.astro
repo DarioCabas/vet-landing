@@ -1,0 +1,49 @@
+---
+import Clock from '../components/icons/Clock.astro'
+import Instagram from '../components/icons/Instagram.astro'
+import LocationIcon from '../components/icons/Location.astro'
+---
+<div class="container px-4 md:px-6 mx-auto ">
+	<div class="max-w-2xl mx-auto text-center mb-8">
+		<h2 class="text-3xl font-bold leading-tight text-gray-100 dark:text-black sm:text-4xl lg:text-5xl">Encuentranos</h2>
+	</div>
+	<div class="w-full mx-auto rounded-lg overflow-hidden bg-white/0 shadow-lg ring-1 ring-black/5 backdrop-blur-3xl">
+			<div class="p-6 md:p-8">
+					<div class="grid gap-6 md:grid-cols-2">
+							<div class="space-y-6">
+									<div class="flex flex-col items-center space-y-2 text-center">
+											<LocationIcon class="size-12" />
+											<a class="font-semibold hover:underline text-black" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir//-0.1289937,-78.4954438/@-0.1291423,-78.4956829,19.3z/data=!4m2!4m1!3e0?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D">Nuestra ubicación</a>
+											<address class="not-italic text-sm text-gray-500">
+													Pedro Freile y Av. Cristóbal Vaca de Castro<br>
+													Junto a Farmacias Económicas en Pedro Freile<br>
+													Quito, Ecuador
+											</address>
+									</div>
+									<div class="flex flex-col items-center space-y-2 text-center">
+											<Clock class="size-12" />
+											<h3 class="font-semibold text-black">Horarios de atención</h3>
+											<p class="text-sm text-gray-500">
+													Lunes - Viernes: 9AM - 5PM<br>
+													Sábados: 10AM - 2PM<br>
+													Domingos: Cerrados
+											</p>
+									</div>
+							</div>
+							<div class="space-y-6">
+									<div class="aspect-w-16 h-full">
+											<iframe 
+													src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d997.4520463885481!2d-78.4956829!3d-0.1291423!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x91d585403150471f%3A0x940b1abc5dbb8bdf!2sVGC3%2BCR3%2C%20Pedro%20Freile%2C%20Quito!3m2!1d-0.128985!2d-78.4954722!5e0!3m2!1sen!2sec!4v1726514718092!5m2!1sen!2sec"
+													width="100%" 
+													height="100%" 
+													style="border:0;" 
+													allowfullscreen="" 
+													loading="lazy"
+													title="Ubicación de la veterinaria"
+											></iframe>
+									</div>
+							</div>
+					</div>
+			</div>
+	</div>
+</div>

@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Hero from '../sections/Hero.astro';
+import Services from '../sections/Services.astro';
+import Contact from '../sections/Contact.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="px-4">
+		<SectionContainer class="py-16 md:py-36">
+			<Hero />
+		</SectionContainer>
+    <SectionContainer class="py-16 md:py-0">
+			<Services />
+		</SectionContainer>
+		<SectionContainer class="py-16 md:py-16">
+			<Contact />
+		</SectionContainer>
+	</main>
+</Layout>

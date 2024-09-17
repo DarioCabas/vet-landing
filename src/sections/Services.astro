@@ -1,0 +1,65 @@
+---
+import Ambulance from "../components/icons/Ambulance.astro";
+import Bath from "../components/icons/Bath.astro";
+import Clipboard from "../components/icons/Clipboard.astro";
+import Dental from "../components/icons/Dental.astro";
+import Razor from "../components/icons/Razor.astro";
+import Slice from "../components/icons/Slice.astro";
+import Vaccine from "../components/icons/Vaccine.astro";
+
+const services = [
+	{
+		title: "Consulta Veterinaria",
+		description: "Evaluación completa de la salud de tu mascota para detectar cualquier problema y ofrecer el mejor tratamiento.",
+		icon: Clipboard,
+	},
+	{
+		title: "Vacunas y Desparasitación",
+		description: "Protegemos a tu mascota con vacunas y desparasitaciones que previenen enfermedades comunes.",
+		icon: Vaccine,
+	},
+	{
+		title: "Cuidado Dental",
+		description: "Limpieza y tratamiento dental para mantener la salud bucal de tu mascota.",
+		icon: Dental,
+	},
+	{
+		title: "Cirugía",
+		description: "Realizamos procedimientos quirúrgicos seguros y profesionales para la salud de tu mascota.",
+		icon: Slice,
+	},
+	{
+		title: "Hospitalización",
+		description: "Atención médica en caso de enfermedad o recuperación postquirúrgica.",
+		icon: Ambulance,
+	},
+	{
+		title: "Peluquería Completa",
+		description: "Corte y cuidado del pelaje para mantener a tu mascota limpia y estilizada, asi como el corte de uñas y cepillado de dientes",
+		icon: Razor,
+	},
+	{title: "Baños, Medicados/Antipulgas", description: "Tratamientos especializados para afecciones de la piel y el pelaje.", icon: Bath},
+]
+
+---
+<div class="px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-bold leading-tight text-gray-100 dark:text-black sm:text-4xl lg:text-5xl">Nuestros servicios</h2>
+            <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">Nuestro equipo está formado por profesionales altamente capacitados y amables, dedicados a ofrecer el mejor cuidado a tu compañero de vida.</p>
+        </div>
+				<div class="grid grid-cols-1 gap-6 mt-12 lg:mt-16 xl:gap-10 sm:grid-cols-2 lg:grid-cols-3">
+				{services.map((service) => (
+            <div class="bg-white rounded shadow transition-transform duration-500 ease-in-out transform hover:scale-105">
+                <div class="p-8 ">
+                    <div class="flex items-center">
+                        <service.icon class="size-12"/>
+                        <div class="ml-5 mr-auto">
+                            <p class="text-xl font-semibold text-black">{service.title}</p>
+                        </div>
+                    </div>
+                    <p class="text-base leading-relaxed text-gray-600 mt-7">{service.description}</p>
+                </div>
+            </div>
+				))}
+				</div>
+</div>
