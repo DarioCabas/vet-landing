@@ -1,25 +1,40 @@
 ---
 import Footer from '../sections/Footer.astro';
-
+import Header from '../sections/Header.astro';
+// Supports weights 200-800
+import '@fontsource-variable/karla';
 interface Props {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+		<meta property="og:url" content="https://vet-landing-4vkq4wakb-dariocabas-projects.vercel.app/">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content={title}>
+		<meta property="og:description" content={description}>
+		<meta property="og:image" content="https://res.cloudinary.com/dlipyi4ub/image/upload/v1726534035/ilustration_lyuwsw.png">
+		<meta property="og:image:alt" content="Logo de la veterinaria">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content={title}>
+		<meta name="twitter:description" content={description}>
+		<meta name="twitter:image" content="https://res.cloudinary.com/dlipyi4ub/image/upload/v1726534035/ilustration_lyuwsw.png">
+		<meta name="twitter:image:alt" content="Logo de la veterinaria">
 		<title>{title}</title>
 	</head>
 	<body class="relative text-black dark:text-white">
 		<div class="absolute top-0 z-[-2] h-full w-screen rotate-180 transform bg-white bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]"></div>
+		<Header />
 		<slot />
 		<Footer />
 	</body>
@@ -29,7 +44,7 @@ const { title } = Astro.props;
 		color-scheme: light dark;
 	}
 	html {
-		font-family: system-ui, sans-serif;
+		font-family: 'Karla Variable',system-ui, sans-serif;
 		scroll-behavior: smooth;
 	}
 

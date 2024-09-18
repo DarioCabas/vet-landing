@@ -1,0 +1,40 @@
+---
+
+---
+
+<header
+  class="fixed flex top-0 z-10 justify-center items-center w-full mx-auto mt-4"
+>
+  <nav
+    class="flex px-3 text-sm font-medium rounded-full dark:text-gray-600 text-gray-200 justify-center items-center"
+  >
+	<div class="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
+    <a href="#"
+      class="mr-4 block cursor-pointer py-1.5 text-base text-slate-800 font-semibold">
+      Central Veterinaria 
+    </a>
+		<ul class="flex flex-row gap-2 mt-2 mb-2 lg:mb-0 lg:mt-0 items-center lg:gap-6">
+			<li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+				<a href="https://wa.me/593994695613" target="_blank" rel="noopener noreferrer" class="flex items-center hover:text-green-500">Whatsapp</a>
+			</li>
+			<li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+				<a href="https://www.instagram.com/centralveterinaria_uio/" target="_blank" rel="noopener noreferrer" class="flex items-center hover:text-red-500">Instagram</a>
+			</li>
+		</ul>
+  </div>
+  </nav>
+</header>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur dark:bg-red-800/90 bg-red-100/50 ring-black/10;
+    }
+  }
+</style>

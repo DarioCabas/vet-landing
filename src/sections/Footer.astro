@@ -2,27 +2,21 @@
 import Instagram from "../components/icons/Instagram.astro";
 ---
 
-<footer class="bg-[#3AA6B9] text-white">
-	<div class="container mx-auto px-4 py-12">
-			<div class="flex flex-col md:flex-row justify-between items-center mb-8">
-					<div class="mb-4 md:mb-0">
-							<h2 class="text-3xl font-bold">Central Veterinaria</h2>
-					</div>
-					<div class="flex space-x-6">
-							<div class="flex justify-center space-x-4">
-								<a href="https://www.instagram.com/centralveterinaria_uio/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
-										<div class="size-12 bg-red-100 rounded-full flex items-center justify-center">
-											<Instagram class="size-6" />
-											<span class="sr-only">Instagram</span>
-										</div>
-								</a>
-						</div>
-					</div>
-			</div>
-			<div class="border-t border-gray-700 pt-8">
-			</div>
-			<div class="mt-8 text-center">
-					<p class="text-sm text-white">&copy; 2024 Central Veterinaria. Todos los derechos reservados.</p>
-			</div>
+<footer class="bg-[#3AA6B9] rounded-lg shadow m-4 dark:bg-[#3AA6B9]">
+	<div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+		<div class="flex flex-col md:flex-row items-center gap-4">
+			<img alt="Logo de la veterinaria" src="https://res.cloudinary.com/dlipyi4ub/image/upload/v1726533955/logo_udroqh.png" class="rounded-full size-10 md:mr-4">
+			<span class="text-sm text-gray-500 text-center dark:text-white">© {new Date().getFullYear()} Central Veterinaria - Todos los derechos reservado </span>
+		</div>
+	<ul class="flex flex-wrap mt-3 md:mt-0 gap-4 items-center justify-center text-sm font-medium text-gray-500 dark:text-white">
+		<li>
+			<a href="https://www.instagram.com/centralveterinaria_uio/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+				<div class="size-12 bg-red-100 rounded-full flex items-center justify-center">
+					<Instagram class="size-6" />
+					<span class="sr-only">Instagram</span>
+				</div>
+			</a>
+		</li>
+	</ul>
 	</div>
 </footer>
